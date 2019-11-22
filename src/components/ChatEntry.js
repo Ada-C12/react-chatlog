@@ -19,7 +19,7 @@ const ChatEntry = (props) => {
           {props.message.body}
         </p>
         <p className="entry-time">
-          <TimeStamp moment={props.message.timeStamp} />
+          <TimeStamp time={props.message.timeStamp} />
         </p>
       </div>
     </section>
