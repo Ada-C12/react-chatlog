@@ -4,7 +4,6 @@ import chatMessages from './data/messages.json';
 import ChatLog from './components/ChatLog';
 
 const App = () => {
-  console.log(chatMessages);
   const local = chatMessages[0].sender;
   const remote = chatMessages[1].sender;
 
