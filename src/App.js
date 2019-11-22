@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
 import ChatEntry from './components/ChatEntry';
-import Chatlog from './components/ChatLog';
+import ChatLog from './components/ChatLog';
+
 const App = () => {
   console.log(chatMessages);
 
@@ -13,8 +14,8 @@ const App = () => {
       </header>
       <main>
         <section className="chat-log">
+          <ChatLog entries={chatMessages}/>
           <ChatEntry entry={chatMessages[0]}/>
-          <Chatlog entries={chatMessages}/>
         </section>
       </main>
     </div>
