@@ -10,7 +10,7 @@ const ChatLog = (props) => {
       <ChatEntry
         sender = {chat.sender}
         body = {chat.body}
-        timestamp = {chat.timeStamp}
+        time = {chat.timeStamp}
         />
     )
   });
