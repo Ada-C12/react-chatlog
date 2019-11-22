@@ -8,7 +8,7 @@ const ChatEntry = (props) => {
       <span className="entry-name">{props.sender}</span>
       <section className="entry-bubble">
         {props.body}
-        <span className="entry-time">{props.timeStamp}</span>
+        <section className="entry-time">{props.timeStamp}</section>
       </section>
     </section>
   )
