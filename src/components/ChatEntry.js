@@ -1,7 +1,6 @@
 import React from 'react';
 import './ChatEntry.css';
 import Timestamp from './Timestamp';
-import chatMessages from './data/messages.json';
 
 const ChatEntry = (props) => {
   return(
