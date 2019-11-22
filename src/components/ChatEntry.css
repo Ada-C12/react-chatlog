@@ -23,6 +23,7 @@
 .chat-entry .entry-name {
   font-size: medium;
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .chat-entry .entry-time {
