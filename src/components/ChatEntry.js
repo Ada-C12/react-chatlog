@@ -6,10 +6,11 @@ import PropTypes from 'prop-types';
 const ChatEntry = (props) => {
   
   return (
-    <section className='chat-entry'>
-      <p className='local entry-name'>{props.sender}</p>
-      <p className='local entry-bubble'>{props.body}</p>
-      <p className='local entry-bubble entry-time'><Timestamp time={props.time}/></p>
+    <section className='chat-entry local'>
+      <p className='entry-name'>{props.sender}</p>
+      <p className='entry-bubble'>{props.body}
+        <p className='entry-time'><Timestamp time={props.time}/></p>
+      </p>
     </section>
   )
 }
