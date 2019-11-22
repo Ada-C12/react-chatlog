@@ -6,10 +6,9 @@ const ChatEntry = (props) => {
 // estragon are on the right
 // vladimir are on the left 
 let chatEntryClass = "";
-  if (props.sender === "Estragon") {
+  if (props.local === props.sender) {
     chatEntryClass = "chat-entry local";
   }
-
   else {
     chatEntryClass = "chat-entry remote";
   }

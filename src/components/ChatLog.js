@@ -11,6 +11,8 @@ const ChatLog = (props) => {
         sender = {chat.sender}
         body = {chat.body}
         time = {chat.timeStamp}
+        local = {props.local}
+        remote = {props.remote}
         />
     )
   });
