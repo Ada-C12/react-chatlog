@@ -18,7 +18,7 @@ const App = () => {
         <h1>Chat Log</h1>
       </header>
       <main>
-        <ChatEntry message = {message.sender} body = {message.body} time = {message.timeStamp} />
+        <ChatEntry sender = {message.sender} body = {message.body} time = {message.timeStamp} />
       </main>
     </div>
   );
