@@ -7,32 +7,27 @@ import ChatEntry from "./components/ChatEntry";
 const App = () => {
   console.log(chatMessages);
 
-  const personA=chatMessages[0].sender
-  const personB=chatMessages[1].sender
+  const localPerson=chatMessages[0].sender;
+  let remotePerson;
+
+  let i = 1;
+
+  while (chatMessages[i].sender === localPerson) {
+    i += 1
+  }
+
+  remotePerson = chatMessages[i].sender
 
   return (
     <div id="App">
       <header>
-        <h1>Chat between {personA} and {personB}</h1>
+        <h1>Chat between {localPerson} and {remotePerson}</h1>
       </header>
       <main>
-
-
-
-
         <ChatEntry sender={chatMessages[0].sender} body={chatMessages[0].body} timestamp={chatMessages[0].timeStamp}/>
-
-
-
-
       </main>
     </div>
   );
 };
 
 export default App;
-
-
-
-
-//       <Timeline events={timelineData.events} />
