@@ -1,17 +1,30 @@
 import React from 'react';
 import Timestamp from './Timestamp';
+import './ChatEntry.css';
 
 
 const ChatEntry = (props) => {
-  
+// estragon are on the right
+// vladimir are on the left 
+let chatEntryClass = "";
+  if (props.sender === "Estragon") {
+    chatEntryClass = "chat-entry local";
+  }
+  else {
+    chatEntryClass = "chat-entry remote";
+  }
+
   return (
-    <section>
-      <h1>{props.sender}</h1>
-      <h2>{props.body}</h2>
-      <h2><Timestamp time={props.timeStamp}/></h2>
-    </section>
+      <section className={chatEntryClass}>
+        <p className="entry-name">{props.sender}</p>
+        <p className="entry-bubble">
+          {props.body}
+          <Timestamp time={props.timeStamp}/>
+        </p>
+        
+      </section>
+  
   );
 };
-
 
 export default ChatEntry;
