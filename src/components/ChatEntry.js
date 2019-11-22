@@ -1,12 +1,16 @@
 import React from 'react';
+import Timestamp from './Timestamp';
 import PropTypes from 'prop-types';
+import './ChatEntry.css';
 
 const ChatEntry = (props) => {
   return(
-    <section className="chat-entry">
-      <p className="local entry-name">{props.sender}</p>
-      <p className="local entry-bubble">{props.body}</p>
-      <p className="local entry-time entry-bubble"><Timestamp time={props.time}/></p>
+    <section className="chat-entry remote">
+      <p className="entry-name remote">{props.sender}</p>
+      <p className="entry-bubble">
+        <p className="local ">{props.body}</p>
+        <p className="local entry-time"><Timestamp time={props.time}/></p>
+      </p>
     </section>
   )
 };
