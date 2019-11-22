@@ -8,10 +8,10 @@ const App = () => {
 
   return (
     <div id="App">
-      <header>
-        <h1>Application title</h1>
+      <header id="App header">
+        <h1 id="App h1">Application title</h1>
       </header>
-      <main>
+      <main id="App main">
       <ChatLog messages={chatMessages} />
       </main>
     </div>
