@@ -7,12 +7,10 @@ const ChatEntry = (props) => {
 
   return (
     <article className="chat-entry">
-      <span className="entry-name">{props.sender}</span>
-      {props.body}
-      {props.timeStamp}
-      
-
-
+      <div className="entry-name">{props.sender}</div>
+      <div className="entry-bubble">{props.body}
+        <div className="entry-time"><Timestamp time={props.timestamp}/></div>
+      </div>
     </article>
 
   );
@@ -20,10 +18,3 @@ const ChatEntry = (props) => {
 }
 
 export default ChatEntry;
-
-
-
-
-
-
-  

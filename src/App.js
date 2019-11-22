@@ -8,7 +8,6 @@ const App = () => {
   console.log(chatMessages);
 
   const personA=chatMessages[0].sender
-
   const personB=chatMessages[1].sender
 
   return (
@@ -21,7 +20,7 @@ const App = () => {
 
 
 
-        <ChatEntry />
+        <ChatEntry sender={chatMessages[0].sender} body={chatMessages[0].body} timestamp={chatMessages[0].timeStamp}/>
 
 
 
@@ -36,15 +35,4 @@ export default App;
 
 
 
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <h1 className="App-title">{person}'s Social Media Feed</h1>
-//       </header>
-//       <main className="App-main">
 //       <Timeline events={timelineData.events} />
-//       </main>
-//     </div>
-//   );
-// }
