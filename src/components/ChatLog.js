@@ -6,16 +6,16 @@ import Timestamp from './Timestamp';
 const ChatLog = (props) => {
   const chatLogComponents = props.chats.map((chat, i) => {
     return (
-      <li key={i}>
+      <div key={i}>
         <ChatEntry sender={chat.sender} body={chat.body} timestamp={chat.timeStamp} />
-      </li>
+      </div>
     );
   });
 
   return (
-    <ul className="chat-log">
+    <div className="chat-log">
       {chatLogComponents}
-    </ul>
+    </div>
   );
 };
 
