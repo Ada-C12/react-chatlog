@@ -3,8 +3,10 @@ import './ChatEntry.css';
 
 
 const ChatEntry = (props) => {
+  const entryType = (props.sender === "Vladimir" ? "local" : "remote") + " chat-entry"
+
   return(
-    <section className="local chat-entry">
+    <section className={entryType}>
       <span className="entry-name">{props.sender}</span>
       <section className="entry-bubble">
         {props.body}
