@@ -1,22 +1,30 @@
 import React from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
-import speechBubbleL from './images/speechBubbleLeft.png';
-import speechBubbleR from './images/speechBubbleRight.png';
+import ChatLog from './components/ChatLog';
+
+
+import ChatEntry from './components/ChatEntry';
+
 
 
 const App = () => {
-  console.log(chatMessages);
+  // console.log(chatMessages);
+
+  let m1 = chatMessages[0];
 
   return (
     <div id="App">
       <header>
-        <h1>Application title</h1>
+        <h1>Spill That Tea!</h1>
       </header>
+
       <main>
 
-        <img src={speechBubbleL}></img>
-        <img src={speechBubbleR}></img>
+        <ChatEntry entry={m1}/>
+
+        <hr /><hr /><hr />
+        <ChatLog chatMessages={chatMessages} />
 
       </main>
     </div>
