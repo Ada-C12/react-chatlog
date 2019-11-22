@@ -5,12 +5,18 @@ import PropTypes from 'prop-types';
 
 const ChatEntry = (props) => {
   
+  let status = 'local'
+  if (props.sender === 'Vladimir') {
+    status = 'remote'
+  };
+
   return (
-    <section className='chat-entry local'>
+    <section className={`chat-entry ${status}`}>
       <p className='entry-name'>{props.sender}</p>
-      <p className='entry-bubble'>{props.body}
+      <section className='entry-bubble'>
+        <p>{props.body}</p>
         <p className='entry-time'><Timestamp time={props.time}/></p>
-      </p>
+      </section>
     </section>
   )
 }
