@@ -6,8 +6,8 @@ import Timestamp from './Timestamp';
 const ChatLog = (props) => {
   const chatEntryComponents = props.log.map((entry, i) => {
     return (
-      <ChatEntry sender={entry.sender} body={entry.body} timeStamp={<Timestamp time={entry.timeStamp}/>} />
-    );
+      <ChatEntry sender={ entry.sender } body={ entry.body } timeStamp={<Timestamp time={ entry.timeStamp }/>} />
+    )
   })
 
   return(

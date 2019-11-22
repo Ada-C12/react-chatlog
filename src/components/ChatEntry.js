@@ -1,7 +1,6 @@
 import React from 'react';
 import './ChatEntry.css';
 
-
 const ChatEntry = (props) => {
   const entryType = (props.sender === "Vladimir" ? "local" : "remote") + " chat-entry"
 
