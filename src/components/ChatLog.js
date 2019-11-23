@@ -4,12 +4,10 @@ import ChatEntry from './ChatEntry';
 
 const ChatLog = (props) => {
 
-  
   const messageComponents = props.messages.map((message, i) => {
     return (
 
       <div key={i}>
-
         <ChatEntry
           origin={origin(i)}
           sender={message.sender}
@@ -19,19 +17,19 @@ const ChatLog = (props) => {
       </div>
     )
   })
+
   return (
     <section>
       <div className="chat-log">{messageComponents}</div>
     </section>
-
   )
 }
+
 const origin = (key) => {
     if (key % 2 === 0) {
       return "local";
     } 
     return "remote";
 }
-
 
 export default ChatLog;

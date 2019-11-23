@@ -22,4 +22,5 @@ ChatEntry.propTypes = {
   body: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
 }
+
 export default ChatEntry;
