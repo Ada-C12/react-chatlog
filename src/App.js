@@ -11,8 +11,6 @@ import ChatEntry from './components/ChatEntry';
 const App = () => {
   // console.log(chatMessages);
 
-  let m1 = chatMessages[0];
-
   return (
     <div id="App">
       <header>
@@ -21,9 +19,7 @@ const App = () => {
 
       <main>
 
-        <ChatEntry entry={m1}/>
-
-        <hr /><hr /><hr />
+        
         <ChatLog chatMessages={chatMessages} />
 
       </main>
