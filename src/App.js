@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div id="App">
       <header id="App-header">
-        <h1>Chat between Vladimir and Estrogen</h1>
+        <h1>Chat between Vladimir and Estragon</h1>
       </header>
       <main>
         <section className="chat-log">
