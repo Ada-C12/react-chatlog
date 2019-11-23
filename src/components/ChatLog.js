@@ -4,11 +4,25 @@ import ChatEntry from './ChatEntry.js';
 
 const ChatLog = (props) => {
   const chatEntries = props.messages.map((message, i) => {
+    let source = '';
+    if (message.sender === "Vladimir") {
+      source = 'local';
+    } else {
+      source = 'remote';
+    };
+
     return(
-      <span i = {i}>
-        <ChatEntry sendor={message.sendor} body={message.body} timeStamp={message.timeStamp} />
-      </span>
-    )
+      <div className='chat-log'>
+        <span i = {i}>
+          <ChatEntry
+            sender={message.sender} 
+            body={message.body} 
+            timeStamp={message.timeStamp}
+            source={source}
+          />
+        </span>
+      </div>
+    );
   });
 
   return chatEntries;
