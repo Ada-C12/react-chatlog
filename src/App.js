@@ -6,7 +6,7 @@ import ChatLog from './components/ChatLog';
 
 import ChatEntry from './components/ChatEntry';
 
-
+const LOCAL = "Estragon";
 
 const App = () => {
   // console.log(chatMessages);
@@ -20,7 +20,7 @@ const App = () => {
       <main>
 
         
-        <ChatLog chatMessages={chatMessages} />
+        <ChatLog chatMessages={chatMessages} local={LOCAL}/>
 
       </main>
     </div>
