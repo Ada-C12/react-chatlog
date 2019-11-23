@@ -5,8 +5,6 @@ import chatMessages from '../data/messages.json';
 
 const ChatEntry = ({entry: {sender, body, timeStamp}}) => {
   
-  // let selectStyles = (sender["Estragon"] ? "local" : 'remote')
-  debugger
   let firstSender = chatMessages[0].sender;
   let selectStyles = ( sender === firstSender ? "remote" : "local");
   

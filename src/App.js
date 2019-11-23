@@ -18,7 +18,6 @@ const App = () => {
       <main>
         <section className="chat-log">
           <ChatLog entries={chatMessages}/>
-          {/* <ChatEntry entry={chatMessages[0]}/> */}
         </section>
       </main>
     </div>
