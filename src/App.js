@@ -8,7 +8,6 @@ const App = () => {
   console.log(chatMessages);
 
   const localPerson=chatMessages[0].sender;
-  let remotePerson;
 
   let i = 1;
 
@@ -16,7 +15,7 @@ const App = () => {
     i += 1
   }
 
-  remotePerson = chatMessages[i].sender
+  const remotePerson = chatMessages[i].sender;
 
   return (
     <div id="App">
@@ -24,7 +23,7 @@ const App = () => {
         <h1>Chat between {localPerson} and {remotePerson}</h1>
       </header>
       <main>
-        <ChatLog chats={chatMessages}/>
+        <ChatLog chats={chatMessages} person={localPerson}/>
       </main>
     </div>
   );

@@ -7,7 +7,7 @@ const ChatLog = (props) => {
   const chatLogComponents = props.chats.map((chat, i) => {
     return (
       <div key={i}>
-        <ChatEntry sender={chat.sender} body={chat.body} timestamp={chat.timeStamp} />
+        <ChatEntry sender={chat.sender} body={chat.body} timestamp={chat.timeStamp} person={props.person} />
       </div>
     );
   });
