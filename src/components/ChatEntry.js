@@ -5,9 +5,7 @@ import Timestamp from './Timestamp';
 const ChatEntry = (props) => {
   const buildStyles = () => {
     let selectStyles = "chat-entry ";
-
-    console.log(props.person)
-    selectStyles = selectStyles + (props.sender === props.person ? "local" : "remote");
+    selectStyles = selectStyles + (props.sender === props.local ? "local" : "remote");
     return selectStyles;
   }
 

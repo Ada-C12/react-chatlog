@@ -1,13 +1,12 @@
 import React from 'react';
 import './ChatLog.css';
 import ChatEntry from "./ChatEntry";
-import Timestamp from './Timestamp';
 
 const ChatLog = (props) => {
   const chatLogComponents = props.chats.map((chat, i) => {
     return (
       <div key={i}>
-        <ChatEntry sender={chat.sender} body={chat.body} timestamp={chat.timeStamp} person={props.person} />
+        <ChatEntry sender={chat.sender} body={chat.body} timestamp={chat.timeStamp} local={props.local} />
       </div>
     );
   });

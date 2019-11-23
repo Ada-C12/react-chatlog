@@ -1,18 +1,20 @@
 import React from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
-import ChatEntry from "./components/ChatEntry";
 import ChatLog from "./components/ChatLog";
 
 const App = () => {
-  console.log(chatMessages);
-
   const localPerson=chatMessages[0].sender;
 
   let i = 1;
+  const length = chatMessages.length;
 
-  while (chatMessages[i].sender === localPerson) {
-    i += 1
+  while (i < length) {
+    if (chatMessages[i] !== localPerson) {
+      break;
+    } else {
+      i += 1;
+    }
   }
 
   const remotePerson = chatMessages[i].sender;
@@ -23,7 +25,7 @@ const App = () => {
         <h1>Chat between {localPerson} and {remotePerson}</h1>
       </header>
       <main>
-        <ChatLog chats={chatMessages} person={localPerson}/>
+        <ChatLog chats={chatMessages} local={localPerson}/>
       </main>
     </div>
   );
