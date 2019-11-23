@@ -3,13 +3,10 @@ import './ChatEntry.css';
 import Timestamp from './Timestamp';
 
 const ChatEntry = (props) => {
-
-  const buildStyles = (sender) => {
-    let selectStyles = (sender === 'Vladimir'? 'chat-entry local' : 'chat-entry remote')
-    return selectStyles;
-  }
+  const buildStyles = (props.sender)  === 'Vladimir'? 'chat-entry local' : 'chat-entry remote'
+   
   return (
-      <div className={buildStyles(props.sender)}>
+      <div className={buildStyles}>
         <div className="chat-entry">
         <div className="entry-name"></div>
           <h4>{ props.sender }</h4>
