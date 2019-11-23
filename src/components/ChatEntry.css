@@ -44,10 +44,6 @@
 }
 
 /* "local" messages are shown on the left side */
-.chat-entry.local {
-  text-align: left;
-}
-
 .chat-entry.local .entry-time {
   text-align: right;
 }
