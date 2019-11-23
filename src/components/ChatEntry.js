@@ -8,10 +8,10 @@ const ChatEntry = (props) => {
   const timestamp = props.timeStamp;
   
   return (
-    <div>
-      <h1>{sender}</h1>
-      <p>{body}</p>
-      <Timestamp time={timestamp} />
+    <div className="chat-entry">
+      <h1 className="entry-name">{sender}</h1>
+      <p className="entry-bubble">{body}</p>
+      <Timestamp className="entry-time" time={timestamp} />
     </div>
   );
 }
