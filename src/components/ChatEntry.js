@@ -4,19 +4,19 @@ import chatMessages from '../data/messages.json'
 import Timestamp from './Timestamp';
 
 
-const ChatEntry = () => {
+const ChatEntry = (props) => {
   
-const message = chatMessages[0];
+// const message = chatMessages[0];
 
   return (
-  <div className="chat-entry remote">
+  <div className="chat-entry">
     <div className="entry-name">
-    {message.sender}
+    {props.message.sender}
     </div>
     <div className="entry-bubble">
-    {message.body}
+    {props.message.body}
     <div className="entry-time"><Timestamp 
-    time={message.timeStamp}/>
+    time={props.message.timeStamp}/>
     </div>
     </div>
   </div>
