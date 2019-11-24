@@ -5,10 +5,14 @@ import Timestamp from './Timestamp';
 
 const ChatEntry = (props) => {
   return (
-  <div className='chat-entry'>
-    <h1 className='entry-name'>{ props.sender }</h1>
-    <h3 className='entry-bubble'> { props.body }</h3>
-    <Timestamp className='entry-time' time={props.timeStamp}/>
+  <div className='chat-entry local'>
+    <strong className='entry-name'>{ props.sender }</strong>
+    <div className='entry-bubble'> 
+      <p>
+        { props.body }
+      </p>
+      <Timestamp className='entry-time' time={props.timeStamp}/>
+    </div>
   </div>
   );
 };
