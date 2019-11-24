@@ -4,13 +4,17 @@ import PropTypes from 'prop-types';
 import './ChatEntry.css';
 
 const ChatEntry = (props) => {
+  let status = "local";
+  if (props.sender === "Estragon") {
+    status = "remote"
+  };
   return(
-    <section className="chat-entry remote">
-      <p className="entry-name remote">{props.sender}</p>
-      <p className="entry-bubble">
-        <p className="local ">{props.body}</p>
-        <p className="local entry-time"><Timestamp time={props.time}/></p>
-      </p>
+    <section className={`chat-entry ${status} entry-name`}>
+      <div className="entry-name">{props.sender}</div>
+      <section className="entry-bubble">
+        <p>{props.body}</p>
+        <p className="entry-time"><Timestamp time={props.time}/></p>
+      </section>
     </section>
   )
 };
