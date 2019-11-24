@@ -15,11 +15,7 @@ const ChatLog = props => {
     );
   });
 
-  return (
-    <ul>
-      <li>{chatMessages}</li>
-    </ul>
-  );
+  return <ul class="chat-log">{chatMessages}</ul>;
 };
 
 export default ChatLog;
