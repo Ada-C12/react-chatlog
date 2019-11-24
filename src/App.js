@@ -12,8 +12,7 @@ const App = () => {
         <h1>Chat between Vladimir and Estragon</h1>
       </header>
 
-      <main className="App-main"
-    </div>
+      <main className="App-main">
         < ChatEntry sender={chatMessages[0].sender} body={chatMessages[0].body} timeStamp={chatMessages[0].timeStamp}/>
       </main>
     </div>
