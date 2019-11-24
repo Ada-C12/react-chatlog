@@ -6,10 +6,20 @@ import ChatLog from "./components/ChatLog";
 const App = () => {
   console.log(chatMessages);
 
+  let userSet = new Set();
+
+  chatMessages.forEach(function(message) {
+    userSet.add(message.sender);
+  });
+
+  const users = Array.from(userSet);
+
   return (
     <div id="App">
       <header>
-        <h1>Application title</h1>
+        <h1>
+          Chat between {users[0]} and {users[1]}
+        </h1>
       </header>
       <main>
         <ChatLog chats={chatMessages} />

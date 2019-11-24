@@ -1,6 +1,7 @@
 import React from "react";
 import "./ChatEntry.css";
 import Timestamp from "./Timestamp";
+import PropTypes from "prop-types";
 
 const ChatEntry = props => {
   const bubbleColor = props.sender === "Vladimir" ? "local" : "remote";
@@ -16,6 +17,12 @@ const ChatEntry = props => {
       </section>
     </div>
   );
+};
+
+ChatEntry.propTypes = {
+  sender: PropTypes.string,
+  body: PropTypes.string,
+  timeStamp: PropTypes.string
 };
 
 export default ChatEntry;

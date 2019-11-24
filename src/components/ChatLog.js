@@ -1,6 +1,7 @@
 import React from "react";
 import "./ChatLog.css";
 import ChatEntry from "./ChatEntry";
+import PropTypes from "prop-types";
 
 const ChatLog = props => {
   const chatMessages = props.chats.map((message, i) => {
@@ -15,7 +16,11 @@ const ChatLog = props => {
     );
   });
 
-  return <ul class="chat-log">{chatMessages}</ul>;
+  return <ul className="chat-log">{chatMessages}</ul>;
+};
+
+ChatLog.propTypes = {
+  chats: PropTypes.array
 };
 
 export default ChatLog;
