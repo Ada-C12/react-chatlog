@@ -9,11 +9,11 @@ const App = () => {
   return (
     <div id="App">
       <header>
-        <h1>Application title</h1>
+        <h1>Chat between 2 ppl</h1>
       </header>
       <main>
       <ChatLog
-          messages = {chatMessages.messages}
+          messages = {chatMessages}
         />
       </main>
     </div>

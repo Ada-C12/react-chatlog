@@ -1,7 +1,6 @@
 import React from 'react';
 import './ChatLog.css';
 import ChatEntry from './ChatEntry.js';
-import PropTypes from 'prop-types';
 
 const ChatLog = (props) => {
 
@@ -20,12 +19,12 @@ const ChatLog = (props) => {
   })
   
   return(
-    <section className="">
-      <ul>
+    <section className="chat-log">
         {messageComponents}
-      </ul>
     </section> 
   )
 }
+
+
 
 export default ChatLog;
