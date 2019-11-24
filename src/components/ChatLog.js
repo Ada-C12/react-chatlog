@@ -1,5 +1,6 @@
 import React from 'react';
 import ChatEntry from './ChatEntry.js';
+import './ChatLog.css'
 
 const ChatLog = (props) => {
     const log = props.log;
@@ -14,7 +15,7 @@ const ChatLog = (props) => {
     });
 
     return (
-        <section>
+        <section className="chat-log">
             {entries}
         </section>
     );
