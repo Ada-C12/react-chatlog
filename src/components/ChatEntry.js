@@ -3,13 +3,21 @@ import './ChatEntry.css';
 import Timestamp from './Timestamp';
 
 const ChatEntry = (props) => {
+
+    const messageType = () => {
+      let selectStyles = '';
+      selectStyles = (props.sender === 'Vladimir' ? 'chat-entry local' : 'chat-entry remote');
+      return selectStyles
+    }
+
   return (
-    <>
-      <h3>{props.sender}</h3> 
-      <p>{props.body}</p>
-      <Timestamp time={props.timestamp} />    
-    </>
-  )
-}
+    <p className={messageType()}>
+      <div className="entry-name">{props.sender}</div>
+      <div className="entry-bubble">{props.body}
+        <div className="entry-time"><Timestamp time={props.timestamp} /></div>   
+      </div>
+    </p>
+    );
+  };
 
 export default ChatEntry;

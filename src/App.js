@@ -4,15 +4,15 @@ import chatMessages from './data/messages.json';
 import ChatLog from './components/ChatLog';
 
 function App() {
-  // console.log(chatMessages);
+  console.log(chatMessages);
 
   return (
-    <div id="App">
-      <header>
-      <ChatLog messages={chatMessages.messages} />
+    <div className="App-header">
+      <header className="App">
+        <h1>Chat Log</h1>
       </header>
       <main>
-
+      <ChatLog messages={chatMessages} />
       </main>
     </div>
   );

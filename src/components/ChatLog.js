@@ -2,13 +2,13 @@ import React from 'react';
 import './ChatLog.css';
 import ChatEntry from './ChatEntry.js';
 
-const ChatEntry = (props) => {
+const ChatLog = (props) => {
   console.log(props.messages)
   return (
     props.messages.map((message) => (
       <ChatEntry
-         person={message.sender}
-         status={message.body}
+         sender={message.sender}
+         body={message.body}
          timestamp={message.timestamp}
       />
     ))
