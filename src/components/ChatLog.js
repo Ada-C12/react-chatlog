@@ -25,6 +25,7 @@ const ChatLog = (props) => {
   )
 }
 
+// from the json data, we can tell that EVERY OTHER element is Valdimir and Estragon, so we can use key={i} to access the element index and determine whether to assign local or remote.
 const origin = (key) => {
     if (key % 2 === 0) {
       return "local";
