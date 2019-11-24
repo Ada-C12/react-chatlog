@@ -12,7 +12,7 @@ const App = () => {
         <h1>Application title</h1>
       </header>
       <main>
-        <ChatEntry></ChatEntry>
+        <ChatEntry entry={chatMessages[0]}></ChatEntry>
       </main>
     </div>
   );
