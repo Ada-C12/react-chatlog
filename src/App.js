@@ -6,8 +6,6 @@ import ChatLog from './components/ChatLog'
 const App = () => {
   console.log(chatMessages);
 
-  const chats = chatMessages
-
   return (
     <div id="App">
       <header>
@@ -15,7 +13,7 @@ const App = () => {
       </header>
       <main>
         <section className="chat-log">
-        <ChatLog messages={chats} />
+        <ChatLog messages={chatMessages} />
         </section>
       </main>
     </div>

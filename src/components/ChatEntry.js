@@ -5,7 +5,7 @@ import Timestamp from './Timestamp';
 const ChatEntry = (props) => {
 
   return (
-    <section className="chat-entry local">
+    <section>
       <p className="entry-name">{props.sender}</p>
        <div className="entry-bubble">
       <p>{props.body}</p>
