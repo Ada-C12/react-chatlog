@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import Timestamp from './Timestamp';
 import './ChatEntry.css'
 
+
 const chatEntry = (props) => {
   
+
   return (
-    <section>
-      <h3>{props.sender}</h3>
+    // <section className={`chat-entry.${sender(props.sender)}`}>
+    <section className="chat-entry">
+      <h3 className="entry-name">{props.sender}</h3>
+      <section className="entry-bubble">
         <p>{props.body}</p>
-        <p>{<Timestamp time = {props.timestamp}/>}</p>
+        <p className="entry-time">{<Timestamp time = {props.timestamp}/>}</p>
+      </section>
     </section>
   );
 }
