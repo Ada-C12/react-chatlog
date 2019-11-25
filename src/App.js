@@ -14,7 +14,9 @@ const App = () => {
         <h1>Application title</h1>
       </header>
       <main>
+        <section className="chat-log">
         <ChatLog messages={chats} />
+        </section>
       </main>
     </div>
   );
