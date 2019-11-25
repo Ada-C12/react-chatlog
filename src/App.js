@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
-import ChatEntry from './components/ChatEntry.js'
+import ChatLog from './components/ChatLog.js'
 
 const App = () => {
   console.log(chatMessages);
@@ -18,7 +18,8 @@ const App = () => {
         <h1>Chat Log</h1>
       </header>
       <main>
-        <ChatEntry sender = {message.sender} body = {message.body} time = {message.timeStamp} />
+        {/* <ChatEntry sender = {message.sender} body = {message.body} time = {message.timeStamp} /> */}
+        {<ChatLog/>}
       </main>
     </div>
   );
