@@ -6,11 +6,13 @@ import ChatEntry from './ChatEntry';
 const ChatLog = (props) => {
   const chatCollection = props.allChats.map((chat, i) => {
     return (
+      <section key={i}>
         <ChatEntry
           sender={chat['sender']}
           body={chat['body']}
           timeStamp={chat['timeStamp']}
         />
+      </section>
     )
   })
   return (
@@ -21,7 +23,7 @@ const ChatLog = (props) => {
 }
 
 ChatLog.propTypes = {
-  sender: PropTypes.string.isRequired,
+  allChats: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default ChatLog;
