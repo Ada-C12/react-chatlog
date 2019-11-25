@@ -1,11 +1,12 @@
 import React from 'react';
 import './ChatLog.css';
-import ChatEntry from './components/ChatEntry.js'
+import ChatEntry from './ChatEntry.js'
+import chatMessages from '../data/messages.json';
 
 const ChatLog = () => {
-  const chatEntries = ChatEntry
+  const chatMessagesList = chatMessages
 
-  const entries = chatEntries.map((entry, i) => {
+  const entries = chatMessagesList.map((entry, i) => {
     return(
       <li key = {i}>
           <ChatEntry sender={entry.sender} body={entry.body} time={entry.timeStamp}/>
