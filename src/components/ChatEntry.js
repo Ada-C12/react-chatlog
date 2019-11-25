@@ -15,7 +15,6 @@ const chatEntry = (props) => {
   
 
   return (
-    // <section className={`chat-entry.${sender(props.sender)}`}>
     <section className={`chat-entry ${sender(props.sender)}`}>
       <h3 className="entry-name">{props.sender}</h3>
       <section className="entry-bubble">
@@ -26,16 +25,10 @@ const chatEntry = (props) => {
   );
 }
 
-// Student.propTypes = {
-//   fullName: PropTypes.string.isRequired,
-//   nickName: PropTypes.string.isRequired,
-//   pronouns: PropTypes.string.isRequired,
-//   birthday: PropTypes.string,
-//   demos: PropTypes.shape({
-//     age: PropTypes.number.isRequired,
-//     grade: PropTypes.string,
-//     house: PropTypes.string.isRequired,
-//   }).isRequired,
-// }
+chatEntry.propTypes = {
+  sender: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  timestamp: PropTypes.instanceOf(Timestamp).isRequired,
+}
 
 export default chatEntry;
