@@ -15,6 +15,7 @@ const ChatLog = (props) => {
       </section>
     )
   })
+  
   return (
     <div className='chat-log'>
       {chatCollection}
