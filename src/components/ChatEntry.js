@@ -1,20 +1,26 @@
 import React from 'react';
 import './ChatEntry.css';
-// import PropTypes from 'prop-types';
 import Timestamp from './Timestamp';
 
 const ChatEntry = (props) => {
+  let style = 'chat-entry';
 
-  // const selectStyles = props.class + ' ' + (props.present ? 'present' : 'absent');
-  // const selectStyles = props.present ? 'present' : 'absent';
+  if (props.entry.sender === 'Vladimir') {
+    style = style + ' local'
+  } else {
+    style = style + ' remote'
+  }
 
   return(
-    <section>
-      <h3>chat entry</h3>
-      <div>
-        prop senter: {props.entry.sender}
-        prop body: {props.entry.body}
-        prop time: <Timestamp time={props.entry.timeStamp} />
+    <section className={style}>
+      <div className='entry-name'>
+        {props.entry.sender}
+      </div>
+      <div className='entry-bubble'>
+        {props.entry.body}
+        <div className='entry-time'>
+        <Timestamp time={props.entry.timeStamp} />
+        </div>
       </div>
     </section>
   );
