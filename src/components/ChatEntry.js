@@ -4,7 +4,7 @@ import './ChatEntry.css'
 
 const ChatEntry = (props) => {
   const entry = props.entry;
-  const chatClassName = (entry.sender === "Vladimir") ? "chat-entry local" : "chat-entry remote";
+  const chatClassName = (entry.sender === props.localSender) ? "chat-entry local" : "chat-entry remote";
 
   return (
     <section className={chatClassName}>

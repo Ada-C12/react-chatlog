@@ -8,7 +8,7 @@ const ChatLog = (props) => {
   const entries = log.map((entry, i) => {
     return (
       <section key={i}>
-        <ChatEntry entry={entry} />
+        <ChatEntry entry={entry} localSender={props.local}/>
       </section>
     );
 

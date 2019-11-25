@@ -8,6 +8,7 @@ const App = () => {
   for (let i = 0; i < chatMessages.length; i++) {
     senders.add(chatMessages[i].sender);
   }
+  const localSender = senders.values().next().value;
 
   let recipients = "";
   let counter = 1;
@@ -28,7 +29,7 @@ const App = () => {
         <h1>Chat between{recipients} </h1>
       </header>
       <main>
-        <ChatLog log={chatMessages}></ChatLog>
+        <ChatLog log={chatMessages} local={localSender}></ChatLog>
       </main>
     </div>
   );
