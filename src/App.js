@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div id="App">
       <header>
-        <h1>Chat between Vladimir and Estragon</h1>
+        <h1>Chat between {chatMessages[0].sender} and {chatMessages[1].sender}</h1>
       </header>
       <main>
         <ChatLog
