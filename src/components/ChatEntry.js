@@ -2,7 +2,6 @@ import React from 'react';
 import './ChatEntry.css';
 import Timestamp from './Timestamp';
 
-
 const ChatEntry = (props) => {
    const entryStyle = (props.sender) === 'Vladimir'? 'chat-entry local' : 'chat-entry remote';
 
