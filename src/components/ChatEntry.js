@@ -12,9 +12,9 @@ const buildStyles = (sender) => {
 
   return (
   <section className={buildStyles(props.message.sender)}>
-    <div className="entry-name">
+    <h2 className="entry-name">
       {props.message.sender}
-    </div>
+    </h2>
     <div className="entry-bubble">
       {props.message.body}
       <div className="entry-time"><Timestamp time={props.message.timeStamp}/>

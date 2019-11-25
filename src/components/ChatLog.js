@@ -6,9 +6,9 @@ const ChatLog = (props) => {
   const chatLogMessages = props.messages.map((message, i) => {
 
     return (
-      <div key={i}> 
+      <section key={i}> 
       < ChatEntry message={message} key={i}/>
-      </div>
+      </section>
     )
   });
   

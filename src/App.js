@@ -11,6 +11,7 @@ const App = () => {
   return (
     <div id="App">
       <header>
+
         <h1>Chat log</h1>
       </header>
       <main>
