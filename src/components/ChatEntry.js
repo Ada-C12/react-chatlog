@@ -3,10 +3,10 @@ import './ChatEntry.css';
 import Timestamp from './Timestamp';
 
 const ChatEntry = ({sender, body, timestamp, local}) => {
-  const alignmentClass = local === true ? "chat-entry local" : "chat-entry remote";
+  const alignmentClass = local === true ? "local" : "remote";
   
   return (
-    <div className={alignmentClass}>
+    <div className={`chat-entry ${alignmentClass}`}>
       <div className="entry-name">
         {sender}
       </div>
