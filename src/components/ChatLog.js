@@ -7,19 +7,18 @@ const ChatLog = (props) => {
   const allChats = props.chats.map((chat, i) => {
     return (
       <section key={i}>
-        <li>
+        <div>
           <ChatEntry entry={chat} />
-        </li>
+        </div>
       </section>
     )
   })
 
   return(
-    <section>
-      <h3>chat log</h3>
-      <ul>
+    <section className='chat-log'>
+      <div>
         {allChats}
-      </ul>
+      </div>
     </section>
   );
 };
