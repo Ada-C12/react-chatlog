@@ -12,7 +12,7 @@ const ChatLog = ({chatMessages}) => {
         key={i}
         sender={message.sender}
         body={message.body}
-        timestamp={message.timestamp}
+        timeStamp={message.timeStamp}
         local={local}
       />
     )
