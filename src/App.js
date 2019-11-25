@@ -7,7 +7,7 @@ const App = () => {
   console.log(chatMessages);
 
   return (
-    <div id="App">
+    <div className="App">
       <header>
         <h1>Ada's Chat Log</h1>
       </header>
