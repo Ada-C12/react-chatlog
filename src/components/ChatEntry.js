@@ -1,24 +1,22 @@
 import React from 'react';
 import Timestamp from './Timestamp';
+import './ChatEntry.css';
 
 
 const ChatEntry = (props) => {
-  const timestamp
-  const entry = props.entry;
-  const chatClassName;
-  if (entry.sender === "Vladimir"){
-    chatClassName = "chat-entry local";
-  }else{
+  
+  let chatClassName = "chat-entry local";
+  if (props.sender === "Estragon"){
     chatClassName = "chat-entry remote";
   }
   return(
-    <section className = {chatClassName}>
-      <h3 className = "entry-name">{entry.sender}</h3>
+    <div className = {chatClassName}>
+      <h3 className = "entry-name">{props.sender}</h3>
         <section className = "entry-bubble">
-          <p>{entry.body}</p>
-          <p className = "entry-time"><Timestamp time = {entry.timestamp}/></p>
+          <p>{props.body}</p>
+          <p className = "entry-time"><Timestamp time = {props.timestamp}/></p>
         </section>
-    </section>
+    </div>
   );
 }
 
