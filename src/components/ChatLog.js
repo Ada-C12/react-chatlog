@@ -8,9 +8,9 @@ const ChatLog = () => {
 
   const entries = chatMessagesList.map((entry, i) => {
     return(
-      <li key = {i}>
+      <p key = {i}>
           <ChatEntry sender={entry.sender} body={entry.body} time={entry.timeStamp}/>
-      </li>
+      </p>
     );
   }); 
   
