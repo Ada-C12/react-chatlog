@@ -23,6 +23,7 @@
 .chat-entry .entry-name {
   font-size: medium;
   margin-bottom: 0.5rem;
+  font-weight: bold; /* Added boldening to text to better match example */
 }
 
 .chat-entry .entry-time {
@@ -46,6 +47,7 @@
 /* "local" messages are shown on the left side */
 .chat-entry.local {
   text-align: left;
+  /* color: orange */
 }
 
 .chat-entry.local .entry-time {
@@ -64,6 +66,7 @@
 /* "remote" messages are shown on the right side, in blue */
 .chat-entry.remote {
   text-align: right;
+  /* color: blue */
 }
 
 .chat-entry.remote .entry-bubble {

@@ -9,5 +9,4 @@ const Timestamp = (props) => {
   return <span title={absolute}>{relative}</span>;
 };
 
-
 export default Timestamp;
